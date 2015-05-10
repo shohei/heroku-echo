@@ -1,4 +1,5 @@
-var port = 8084;
+var port = process.env.PORT || 8084;
+console.log('listening on '+port);
 var WebSocketServer = require('ws').Server;
 var wss = new WebSocketServer({port: port});
 
