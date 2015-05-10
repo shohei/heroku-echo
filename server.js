@@ -1,10 +1,9 @@
-var port = process.env.PORT || 8084;
+var port = process.env.PORT || 8085;
 console.log('listening on '+port);
 var WebSocketServer = require('ws').Server;
 var wss = new WebSocketServer({port: port});
 
 wss.on('connection', function connection(ws) {
-
     ws.on('open', function open() {
 	console.log('connected');
     });
